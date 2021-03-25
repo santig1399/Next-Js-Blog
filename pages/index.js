@@ -1,7 +1,7 @@
 import Head from "next/head";
 import HeroPost from "../components/blog/HeroPost";
 import PostCard from "../components/blog/PostCard";
-import { Row } from "../components/Layout/Layout.elements";
+import { Row } from "../components/layout/Layout.elements";
 
 const Home = ({ posts }) => {
   const heroPost = posts[0];
