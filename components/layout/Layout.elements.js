@@ -33,9 +33,10 @@ export const Container = styled.div`
 
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: ${({col})=>(col) ? `repeat(${col}, 1fr)` : 'repeat(2, 1fr)' };
+  grid-template-columns: ${({ col }) =>
+    col ? `repeat(${col}, 1fr)` : "repeat(2, 1fr)"};
   gap: 8rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
   @media screen and (max-width: 960px) {
     grid-template-columns: repeat(1, 1fr);
     gap: 4rem;

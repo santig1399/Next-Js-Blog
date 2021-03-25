@@ -86,4 +86,9 @@ export const NavLinkItem = styled.li`
   }
 `;
 
-export const NavLinkText = styled.a``;
+export const NavLinkText = styled.p``;
+
+export const ExternalLink = styled.a`
+  color: white;
+  text-decoration: none;
+`;

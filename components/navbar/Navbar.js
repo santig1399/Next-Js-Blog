@@ -9,6 +9,7 @@ import {
   NavLinkList,
   NavLinkItem,
   NavLinkText,
+  ExternalLink,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -32,14 +33,18 @@ const Navbar = () => {
         </MobileIcon>
         <NavLinkList onClick={handleClick} click={click}>
           <NavLinkItem>
-            <Link href="/blog">
-              <NavLinkText>Blog</NavLinkText>
-            </Link>
-          </NavLinkItem>
-          <NavLinkItem>
             <Link href="/about">
               <NavLinkText>About</NavLinkText>
             </Link>
+          </NavLinkItem>
+          <NavLinkItem>
+            <ExternalLink
+              href="https://github.com/santig1399/Next-Js-Blog/blob/main/README.md"
+              rel="noopener"
+              target="_blank"
+            >
+              <NavLinkText>GitHub</NavLinkText>
+            </ExternalLink>
           </NavLinkItem>
         </NavLinkList>
       </NavbarContainer>

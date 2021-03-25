@@ -6,26 +6,26 @@ import {
   Img,
   PostDescription,
   PostTitle,
-  ReadButton,
-} from "./blog.elements";
+  Caption,
+} from "./Blog.elements";
 
 const PostCard = ({ post }) => {
   return (
-    <Card>
-      <CardHead>
-        <Img
-          src={post.posterImage.formats.medium.url}
-          alt={post.posterImage.name}
-        />
-      </CardHead>
-      <CardBody>
-        <PostTitle>{post.title}</PostTitle>
-        <PostDescription>{post.description}</PostDescription>
-      </CardBody>
-      <Link href={`/blog/${post.url}`}>
-        <ReadButton>Read More</ReadButton>
-      </Link>
-    </Card>
+    <Link href={`/blog/${post.url}`}>
+      <Card>
+        <CardHead>
+          <Img
+            src={post.posterImage.formats.medium.url}
+            alt={post.posterImage.name}
+          />
+        </CardHead>
+        <CardBody>
+          <PostTitle>{post.title}</PostTitle>
+          <Caption>{post.published_at.split("T")[0]}</Caption>
+          <PostDescription>{post.description}</PostDescription>
+        </CardBody>
+      </Card>
+    </Link>
   );
 };
 

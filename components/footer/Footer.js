@@ -7,6 +7,7 @@ import {
   LinkWrapper,
   LinkItem,
   LinkText,
+  ExternalLink,
 } from "./Footer.elements";
 
 const Footer = () => {
@@ -22,9 +23,13 @@ const Footer = () => {
               </Link>
             </LinkItem>
             <LinkItem>
-              <Link href="/about">
-                <LinkText>About</LinkText>
-              </Link>
+              <ExternalLink
+                href="https://github.com/santig1399/Next-Js-Blog/blob/main/README.md"
+                rel="noopener"
+                target="_blank"
+              >
+                <LinkText>GitHub</LinkText>
+              </ExternalLink>
             </LinkItem>
           </LinkWrapper>
         </FooterLinks>

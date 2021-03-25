@@ -23,10 +23,6 @@ export const FooterBrand = styled.h2`
   padding: 1rem;
   text-align: center;
   cursor: pointer;
-  &:hover {
-    color: #6655ff;
-    transition: ease 0.5s;
-  }
 `;
 export const FooterLinks = styled.ul`
   display: flex;
@@ -46,6 +42,15 @@ export const LinkWrapper = styled.div`
   align-items: center;
   padding: 1rem;
 `;
+
+export const SocialMedia = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+`;
+
 export const LinkItem = styled.li`
   border-bottom: 1px solid transparent;
   &:hover {
@@ -56,4 +61,9 @@ export const LinkText = styled.p`
   cursor: pointer;
   margin: 1rem;
   font-size: 18px;
+`;
+
+export const ExternalLink = styled.a`
+  color: white;
+  text-decoration: none;
 `;

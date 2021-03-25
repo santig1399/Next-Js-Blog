@@ -2,35 +2,47 @@ import styled from "styled-components";
 
 export const StarredPost = styled.div`
   display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  margin: 2rem 0rem;
-  gap: 1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #bababa;
+  cursor: pointer;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const StarredImage = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 `;
 export const StarredDescription = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and(max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const Card = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: start;
-
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -43,10 +55,10 @@ export const CardHead = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  &:hover {
+  /* &:hover {
     transform: scale(1.2);
     transition: ease 0.5s;
-  }
+  } */
 `;
 
 export const CardBody = styled.div`
@@ -63,11 +75,11 @@ export const ReadButton = styled.a`
   padding: 1rem;
   color: black;
   font-size: 20px;
-
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem 0rem;
   border: 1px solid #0d0504;
   border-radius: 3px;
 
@@ -81,14 +93,23 @@ export const ReadButton = styled.a`
 export const PostTitle = styled.h2`
   padding: 1rem 0rem;
   font-size: 2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
   @media screen and (max-width: 330px) {
     font-size: 1rem;
   }
 `;
 export const PostDescription = styled.p`
-  padding-bottom: 1rem;
+  padding: 1rem 0rem;
   font-size: 22px;
   @media screen and (max-width: 330px) {
     font-size: 1rem;
   }
+`;
+
+export const Caption = styled.caption`
+  text-align: left;
+  font-size: 20px;
 `;

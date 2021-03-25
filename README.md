@@ -1,15 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next-blog.okdev.tech
 
-## Getting Started
+Next-blog.okdev.tech was created with Next.js and Styled Components as the front-end technologies.
 
-To run the project use
+It is fetching the blogs data from Strapi CMS.
 
-```bash
-npm install && npm run dev
-# or
-yarn install && yarn dev
-```
+Hosted with Vercel!
+
+## Running locally
+
+Open terminal into the next-blog directory and type 'npm install && npm run dev'
+
+This will run a localhost:3000 with the website running locally on your machine.
 
 ## See the live demo
 
-[Demo]().
+[Demo](next-blog.okdev.tech).
