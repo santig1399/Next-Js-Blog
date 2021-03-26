@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Container, GlobalStyle } from "../components/Layout/Layout.elements";
+import { Container, GlobalStyle } from "../components/layout/Layout.elements";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 
