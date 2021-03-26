@@ -14,4 +14,4 @@ This will run a localhost:3000 with the website running locally on your machine.
 
 ## See the live demo
 
-[Demo](next-blog.okdev.tech).
+[Demo](https://next-blog.okdev.tech).
