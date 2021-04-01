@@ -18,7 +18,7 @@ const Footer = () => {
         <FooterLinks>
           <LinkWrapper>
             <LinkItem>
-              <Link href="/blog">
+              <Link href="/">
                 <LinkText>Blog</LinkText>
               </Link>
             </LinkItem>
