@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Article from "../../components/blog/Article";
+import MorePosts from "../../components/blog/MorePosts";
 import DefaultErrorPage from "next/error";
+import { Separator } from "../../components/blog/Blog.elements";
 
-const Post = ({ post }) => {
+const Post = ({ post, morePosts }) => {
   const router = useRouter();
   if (!router.isFallback && !post) {
     return <DefaultErrorPage statusCode={404} />;
@@ -22,6 +24,8 @@ const Post = ({ post }) => {
           <title>Next BLog | {post.title}</title>
         </Head>
         <Article post={post} />
+        <Separator>More Stories</Separator>
+        <MorePosts posts={morePosts} />
       </>
     );
   }
@@ -44,11 +48,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/demos/${params.url}`
-    );
-    const post = await res.json();
-    return { props: { post } };
+    // const res = await fetch(
+    //   `${process.env.NEXT_PUBLIC_API_URL}/demos/${params.url}`
+    // );
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/demos`);
+    const data = await res.json();
+    const post = data.filter((d) => {
+      return d.url === params.url;
+    });
+    const morePosts = data.filter((d) => {
+      return d.url != params.url;
+    });
+
+    return {
+      props: { post: post[0], morePosts: morePosts.splice(2) },
+    };
   } catch (error) {
     return { props: {} };
   }

@@ -113,3 +113,11 @@ export const Caption = styled.caption`
   text-align: left;
   font-size: 20px;
 `;
+
+export const Separator = styled.h2`
+  width: 100%;
+  font-size: 3rem;
+  padding-top: 4rem;
+  margin: 4rem 0rem;
+  border-top: 1px solid #bababa;
+`;
